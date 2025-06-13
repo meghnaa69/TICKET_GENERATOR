@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Ticket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ticket-container">
+        <h1>Coding Conf 2025</h1>
+        <p class="tagline">Exclusive Access Pass</p>
+
+        <div class="form-container">
+            <label for="avatar">Upload Avatar:</label>
+            <input type="file" id="avatar" accept="image/png, image/jpeg">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email">
+
+            <label for="github">GitHub Username:</label>
+            <input type="text" id="github">
+
+            <label for="seat">Seat Number:</label>
+            <input type="text" id="seat">
+        </div>
+
+        <button id="generate">Generate My Ticket</button>
+
+        <div id="generatedTicket" class="ticket">
+            <div class="ticket-header">
+                <h2>Your Ticket</h2>
+                <div id="avatarPreview"></div>
+            </div>
+
+            <div class="ticket-body">
+                <p><strong>Name:</strong> <span id="ticketName"></span></p>
+                <p><strong>Email:</strong> <span id="ticketEmail"></span></p>
+                <p><strong>GitHub:</strong> <span id="ticketGithub"></span></p>
+                <p><strong>Ticket ID:</strong> <span id="ticketIDVal"></span></p>
+                <p><strong>Date:</strong> <span id="ticketDate"></span></p>
+                <p><strong>Seat Number:</strong> <span id="ticketSeat"></span></p>
+            </div>
+
+            <div id="qrCode"></div>
+
+            <button id="download">Download Ticket</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
